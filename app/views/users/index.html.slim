@@ -1,6 +1,12 @@
-h1 Users/index
-= link_to "logout", logout_path, method: :delete
-
-.row
-  .col-md-8.offset-md-2.border
-    = render @users
+.matching-index-page
+  = link_to "logout", logout_path, method: :delete
+  .matching
+    p.matching-title.ml-3
+      | メッセージ
+    p.matching-num
+      | ユーザ数: #{@users.count} 人
+    .matching__list
+      - if @users.present?
+        = render @users
+      - else
+        p ユーザーがいません
