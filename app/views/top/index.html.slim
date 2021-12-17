@@ -1,4 +1,8 @@
 h1 Top#index
 p Find me in app/views/top/index.html.slim
-.btn.btn-primary
-  | le
+
+- if logged_in?
+  = link_to "logout", logout_path, method: :delete
+- else
+  = link_to "login", login_path, class: 'btn btn-primary'
+  = link_to "signup", new_user_path, class: 'btn btn-danger'
