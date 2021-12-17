@@ -25,7 +25,7 @@ module ChatWithActioncable
     config.load_defaults 6.0
 
     config.generators do |g|
-      g.test_framework false
+      g.javascripts true
       g.skip_routes true
       g.assets false
       g.helper false
