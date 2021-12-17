@@ -1,3 +1,4 @@
 .matching__person
   .matching__person-name
-    = user.name
+    = link_to chat_rooms_path(params: { user_id: user.id }), method: :post do
+      = user.name

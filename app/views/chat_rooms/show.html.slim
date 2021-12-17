@@ -1,0 +1,7 @@
+p chatRoomPage
+
+#chat-messages
+  = render @chat_messages
+
+form
+  textarea data-behavior="chat_room_speaker" data-chat_room_id="#{@chat_room.id}" class="chat-room__message-form_textarea"
